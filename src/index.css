@@ -1,6 +1,6 @@
 :root {
-font-family: "Quicksand", serif;
-background-color: #FFECCF;
+  font-family: "Quicksand", serif;
+  background-color: #ffeccf;
 }
 
 * {
@@ -12,7 +12,11 @@ background-color: #FFECCF;
 header {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(187, 170, 170, 0.474), rgba(119, 111, 111, 0.233)), url(./assets/Background2.jpg);
+  background-image: linear-gradient(
+      rgba(187, 170, 170, 0.474),
+      rgba(119, 111, 111, 0.233)
+    ),
+    url(./assets/Background2.jpg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,7 +38,7 @@ ul {
   list-style: none;
 }
 
-img {
+.avatar {
   width: 10%;
   border-radius: 100%;
 }
@@ -51,7 +55,7 @@ h1 {
   padding-top: 0px;
 }
 
-.skill {
+.metier {
   color: rgb(255, 214, 30);
   font-size: 30px;
 }
@@ -60,4 +64,9 @@ h1 {
   color: white;
   padding-left: 20px;
   margin-bottom: 30px;
+}
+
+.skills {
+  margin-top: 20px;
+  text-align: center;
 }
