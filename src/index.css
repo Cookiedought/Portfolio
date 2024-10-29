@@ -71,20 +71,7 @@ h1 {
   text-align: center;
 }
 
-.project-item {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 300px;
-  margin: 20px auto; 
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-}
-
-figcaption {
-  padding: 10px;
-  text-align: center;
+.projet1 {
+  width: 20%;
+  border-radius: 30%;
 }
