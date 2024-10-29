@@ -1,0 +1,63 @@
+:root {
+font-family: "Quicksand", serif;
+background-color: #FFECCF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(187, 170, 170, 0.474), rgba(119, 111, 111, 0.233)), url(./assets/Background2.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  color: white;
+  font-size: larger;
+  margin-bottom: 20px;
+  padding-bottom: 150px;
+  padding-top: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 10%;
+  border-radius: 100%;
+}
+
+.presentation {
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  color: rgb(233, 221, 0);
+  font-family: "Playwrite GB S", serif;
+  font-size: 50px;
+  padding-top: 0px;
+}
+
+.skill {
+  color: rgb(255, 214, 30);
+  font-size: 30px;
+}
+
+.scroll {
+  color: white;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
