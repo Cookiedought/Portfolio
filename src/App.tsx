@@ -2,6 +2,7 @@ import avatar from "./assets/Avatar.png";
 import "./index.css";
 import Projets from "./components/Projets";
 
+
 function App() {
   return (
     <>
