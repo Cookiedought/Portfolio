@@ -17,6 +17,7 @@
   scroll-behavior: smooth;
 }
 
+/* MOBILE FIRST */
 
   .avatar {
     width: 250px;
@@ -90,7 +91,7 @@
     font-weight: bold;
     display: block;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .contact {
@@ -109,6 +110,9 @@
     border-color: linear-gradient(135deg, #792992 40%, #c7368f);
   }
 
+
+
+/* RESPONSIVE DESKTOP */
 
 @media (min-width: 1250px) {
 
