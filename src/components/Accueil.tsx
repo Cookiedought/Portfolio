@@ -11,12 +11,16 @@ import ReactLogo from "../assets/images/React.png";
 import SQLLogo from "../assets/images/SQL.png";
 import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
-import GithubLogo from "../assets/images/Github.png"
+import GithubLogo from "../assets/images/Github.png";
 import "../styles/Accueil.css";
 import { Link } from "react-router-dom";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleContactClick = () => {
+    window.location.href = "mailto:b.lemortcamille@gmail.com";
+  };
 
   const logos = [
     { src: CSSLogo },
@@ -47,12 +51,16 @@ function Accueil() {
                 LinkedIn
               </a>
             </li>
-            <a href="/CV_Camille_Lemort.pdf" target="_blank" rel="noopener noreferrer">
-            CV
+            <a
+              href="/CV_Camille_Lemort.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CV
             </a>
 
             <li>
-               <Link to="/projets">Projets</Link>
+              <Link to="/projets">Projets</Link>
             </li>
           </ul>
         </nav>
@@ -101,6 +109,10 @@ function Accueil() {
             l'espère, vous donneront envie de m'intégrer à votre équipe!
           </p>
           <p>Alors, pourquoi ne pas me laisser ma chance ?</p>
+
+          <button className="contact" onClick={handleContactClick}>
+            Contactez-moi ici !
+          </button>
         </div>
       </main>
       <footer>

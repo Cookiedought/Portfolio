@@ -131,3 +131,20 @@ main {
   display: block; 
   text-align: center; 
 }
+
+.contact {
+  width: 11rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  background-image: linear-gradient(135deg, #792992 40%, #c7368f);
+  text-decoration: none;
+  border-radius: 0.6rem;
+  margin-left: auto;
+  border-color: linear-gradient(135deg, #792992 40%, #c7368f);
+}
+
