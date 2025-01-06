@@ -64,15 +64,13 @@ function Accueil() {
             </li>
           </ul>
         </nav>
-        <div
-          className="entete"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className="entete">
           <img
             className="avatar"
             src={isHovered ? avatar2 : avatar1}
             alt="Photo et avatar de Camille Lemort"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
           <h1>Camille Lemort</h1>
           <p className="metier">Développeuse Web Junior</p>
