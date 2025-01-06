@@ -1,26 +1,57 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { useState } from "react";
-import avatar1 from "./assets/images/Avatar1.png";
-import avatar2 from "./assets/images/Avatar2.png";
-import "./index.css";
-import Projets from "./components/Projets";
-import "./styles/Accueil.css";
+import avatar1 from "../assets/images/Avatar1.png";
+import avatar2 from "../assets/images/Avatar2.png";
+import "../styles/Accueil.css";
+import CSSLogo from "../assets/images/CSS.png";
+import HTMLLogo from "../assets/images/HTML5.png";
+import IllustratorLogo from "../assets/images/Illustrator.png";
+import IndesignLogo from "../assets/images/Indesign.png";
+import JSLogo from "../assets/images/JS.png";
+import ReactLogo from "../assets/images/React.png";
+import SQLLogo from "../assets/images/SQL.png";
+import TSLogo from "../assets/images/TS.png";
+import ViteLogo from "../assets/images/Vite.png";
+import "../styles/Accueil.css";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
+
+  const logos = [
+    { src: CSSLogo },
+    { src: HTMLLogo },
+    { src: IllustratorLogo },
+    { src: IndesignLogo },
+    { src: JSLogo },
+    { src: ReactLogo },
+    { src: SQLLogo },
+    { src: TSLogo },
+    { src: ViteLogo },
+  ];
+
   return (
     <>
       <header>
         <nav className="navbar">
           <ul className="link">
-            <Link to="/">Accueil</Link>
-            <a href="https://github.com/Cookiedought">Github</a>
-            <a href="https://www.linkedin.com/in/camille-lemort-562497162">
-              linkedIn
-            </a>
-            <a href="/CV_Camille_Lemort.pdf" download="CV_Camille_Lemort.pdf">
-              CV
-            </a>
+            <li>
+              <a href="/">Accueil</a>
+            </li>
+            <li>
+              <a href="https://github.com/Cookiedought">Github</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/camille-lemort-562497162">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="/CV_Camille_Lemort.pdf" download="CV_Camille_Lemort.pdf">
+                CV
+              </a>
+            </li>
+            <li>
+              <a href="/">Projets</a>
+            </li>
           </ul>
         </nav>
         <div
@@ -55,33 +86,35 @@ function Accueil() {
           <i>Pourquoi le développement web ?</i>
           <p>
             Comme beaucoup, depuis petite je suis passionnée par le numérique et
-            toutes ces possiblités. Curieuse de nature j'ai toujours aimé
+            toutes ces possibilités. Curieuse de nature, j'ai toujours aimé
             chercher par moi-même lorsque j'avais des problèmes informatiques,
             ce que je n'ai jamais perdu.
           </p>
           <i>Pourquoi moi plus qu'un ou une autre ?</i>
           <p>
-            Etre débutante dans ce secteur n'est pas chose facile, alors je
+            Être débutante dans ce secteur n'est pas chose facile, alors je
             compense mon manque d'expérience par une motivation sans faille, une
             volonté d’apprendre et une grande capacité d’adaptation. Ma
-            personnalité pétillante et ma curiosité sont des atouts qui je
+            personnalité pétillante et ma curiosité sont des atouts qui, je
             l'espère, vous donneront envie de m'intégrer à votre équipe!
           </p>
           <p>Alors, pourquoi ne pas me laisser ma chance ?</p>
         </div>
       </main>
+      <footer>
+        <div className="logos">
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              className="logo"
+              alt={`Logo ${index}`}
+            />
+          ))}
+        </div>
+      </footer>
     </>
   );
 }
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Accueil />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+export default Accueil;
