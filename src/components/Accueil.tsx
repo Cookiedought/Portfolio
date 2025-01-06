@@ -11,10 +11,15 @@ import ReactLogo from "../assets/images/React.png";
 import SQLLogo from "../assets/images/SQL.png";
 import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
+import GithubLogo from "../assets/images/Github.png";
 import "../styles/Accueil.css";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleContactClick = () => {
+    window.location.href = "mailto:b.lemortcamille@gmail.com";
+  };
 
   const logos = [
     { src: CSSLogo },
@@ -22,47 +27,23 @@ function Accueil() {
     { src: IllustratorLogo },
     { src: IndesignLogo },
     { src: JSLogo },
-    { src: ReactLogo },
-    { src: SQLLogo },
     { src: TSLogo },
     { src: ViteLogo },
+    { src: GithubLogo },
+    { src: ReactLogo },
+    { src: SQLLogo },
   ];
 
   return (
     <>
       <header>
-        <nav className="navbar">
-          <ul className="link">
-            <li>
-              <a href="/">Accueil</a>
-            </li>
-            <li>
-              <a href="https://github.com/Cookiedought">Github</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/camille-lemort-562497162">
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="/CV_Camille_Lemort.pdf" download="CV_Camille_Lemort.pdf">
-                CV
-              </a>
-            </li>
-            <li>
-              <a href="/">Projets</a>
-            </li>
-          </ul>
-        </nav>
-        <div
-          className="entete"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        <div className="entete">
           <img
             className="avatar"
             src={isHovered ? avatar2 : avatar1}
             alt="Photo et avatar de Camille Lemort"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
           <h1>Camille Lemort</h1>
           <p className="metier">Développeuse Web Junior</p>
@@ -99,6 +80,10 @@ function Accueil() {
             l'espère, vous donneront envie de m'intégrer à votre équipe!
           </p>
           <p>Alors, pourquoi ne pas me laisser ma chance ?</p>
+
+          <button className="contact" onClick={handleContactClick}>
+            Contactez-moi ici !
+          </button>
         </div>
       </main>
       <footer>
