@@ -44,11 +44,10 @@ function Accueil() {
                 LinkedIn
               </a>
             </li>
-            <li>
-              <a href="/CV_Camille_Lemort.pdf" download="CV_Camille_Lemort.pdf">
-                CV
-              </a>
-            </li>
+            <a href="/CV_Camille_Lemort.pdf" target="_blank" rel="noopener noreferrer">
+            CV
+            </a>
+
             <li>
               <a href="/">Projets</a>
             </li>
