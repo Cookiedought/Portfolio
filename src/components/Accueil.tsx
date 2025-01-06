@@ -1,11 +1,32 @@
-// src/Accueil.tsx
 import { useState } from "react";
-import avatar1 from "./assets/images/Avatar1.png";
-import avatar2 from "./assets/images/Avatar2.png";
-import "./styles/Accueil.css";
+import avatar1 from "../assets/images/Avatar1.png";
+import avatar2 from "../assets/images/Avatar2.png";
+import "../styles/Accueil.css";
+import CSSLogo from "../assets/images/CSS.png";
+import HTMLLogo from "../assets/images/HTML5.png";
+import IllustratorLogo from "../assets/images/Illustrator.png";
+import IndesignLogo from "../assets/images/Indesign.png";
+import JSLogo from "../assets/images/JS.png";
+import ReactLogo from "../assets/images/React.png";
+import SQLLogo from "../assets/images/SQL.png";
+import TSLogo from "../assets/images/TS.png";
+import ViteLogo from "../assets/images/Vite.png";
+import "../styles/Accueil.css";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
+
+  const logos = [
+    { src: CSSLogo },
+    { src: HTMLLogo },
+    { src: IllustratorLogo },
+    { src: IndesignLogo },
+    { src: JSLogo },
+    { src: ReactLogo },
+    { src: SQLLogo },
+    { src: TSLogo },
+    { src: ViteLogo },
+  ];
 
   return (
     <>
@@ -28,7 +49,9 @@ function Accueil() {
                 CV
               </a>
             </li>
-            <li><a href="/">Projets</a></li>
+            <li>
+              <a href="/">Projets</a>
+            </li>
           </ul>
         </nav>
         <div
@@ -78,6 +101,18 @@ function Accueil() {
           <p>Alors, pourquoi ne pas me laisser ma chance ?</p>
         </div>
       </main>
+      <footer>
+        <div className="logos">
+          {logos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              className="logo"
+              alt={`Logo ${index}`}
+            />
+          ))}
+        </div>
+      </footer>
     </>
   );
 }
