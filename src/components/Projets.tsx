@@ -1,9 +1,13 @@
-function Projets() {
-  return (
-    <body>
-      
-    </body>
-  );
-}
+import "../styles/Projets.css";
 
-export default Projets;
+const Travaux = () => {
+  return (
+    <div className="container">
+      <div className="travaux">
+        <h1>PAGE EN CONSTRUCTION</h1>
+      </div>
+    </div>
+  );
+};
+
+export default Travaux;
