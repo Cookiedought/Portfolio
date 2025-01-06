@@ -3,6 +3,14 @@
     "id": 1,
     "title": "Projet 1",
     "lien": "https://nzlthomas.github.io/Macato-Eats/",
-    "description":"Ce projet est mon tout premier réalisé à la Wild Code School à l'aide de mes camarades Thomas Fortin-Bourget et Manon Moutier."
+    "description": "Ce projet est mon tout premier réalisé à la Wild Code School à l'aide de mes camarades Thomas Fortin-Bourget et Manon Moutier."
+  },
+
+  {
+    "id": 2,
+    "title": "Projet 2",
+    "lien": "https://cookiedought.github.io/Quete-Card-CSS/",
+    "description": "To do."
   }
+
 ]
