@@ -13,7 +13,6 @@ import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
 import GithubLogo from "../assets/images/Github.png";
 import "../styles/Accueil.css";
-import { Link } from "react-router-dom";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
@@ -38,32 +37,6 @@ function Accueil() {
   return (
     <>
       <header>
-        <nav className="navbar">
-          <ul className="link">
-            <li>
-              <a href="/">Accueil</a>
-            </li>
-            <li>
-              <a href="https://github.com/Cookiedought">Github</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/camille-lemort-562497162">
-                LinkedIn
-              </a>
-            </li>
-            <a
-              href="/CV_Camille_Lemort.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              CV
-            </a>
-
-            <li>
-              <Link to="/projets">Projets</Link>
-            </li>
-          </ul>
-        </nav>
         <div className="entete">
           <img
             className="avatar"
