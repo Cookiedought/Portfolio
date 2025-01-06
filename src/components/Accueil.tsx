@@ -11,7 +11,9 @@ import ReactLogo from "../assets/images/React.png";
 import SQLLogo from "../assets/images/SQL.png";
 import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
+import GithubLogo from "../assets/images/Github.png"
 import "../styles/Accueil.css";
+import { Link } from "react-router-dom";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,10 +24,11 @@ function Accueil() {
     { src: IllustratorLogo },
     { src: IndesignLogo },
     { src: JSLogo },
-    { src: ReactLogo },
-    { src: SQLLogo },
     { src: TSLogo },
     { src: ViteLogo },
+    { src: GithubLogo },
+    { src: ReactLogo },
+    { src: SQLLogo },
   ];
 
   return (
@@ -49,7 +52,7 @@ function Accueil() {
             </a>
 
             <li>
-              <a href="/">Projets</a>
+               <Link to="/projets">Projets</Link>
             </li>
           </ul>
         </nav>
