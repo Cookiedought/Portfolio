@@ -13,7 +13,6 @@ import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
 import GithubLogo from "../assets/images/Github.png";
 import GitbashLogo from "../assets/images/Gitbash.png";
-import "../styles/Projets.css";
 import MacatoImage from "../assets/images/Macato.png";
 import TravelUpImage from "../assets/images/TravelUp.png";
 import reConnectImage from "../assets/images/reConnect.png";
