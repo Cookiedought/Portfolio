@@ -1,14 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/NavBar.css";
 
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <ul className="link">
-        <li>
-          <Link to="/">Accueil</Link>
-        </li>
         <li>
           <a href="https://github.com/Cookiedought" target="_blank">
             Github
@@ -31,7 +27,7 @@ const Navbar: React.FC = () => {
             CV
           </a>
         </li>
-        <li>
+             <li>
           <a href="#Projets">Projets</a>
         </li>
       </ul>

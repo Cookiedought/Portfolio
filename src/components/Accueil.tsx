@@ -20,9 +20,9 @@ import reConnectImage from "../assets/images/reConnect.png";
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isSecondaryCarouselVisible, setIsSecondaryCarouselVisible] =
-    useState(false);
-  const [secondarySlides, setSecondarySlides] = useState<any[]>([]);
+  // const [isSecondaryCarouselVisible, setIsSecondaryCarouselVisible] =
+  //   useState(false);
+  // const [secondarySlides, setSecondarySlides] = useState<any[]>([]);
 
   const handleContactClick = () => {
     window.location.href = "mailto:b.lemortcamille@gmail.com";
@@ -81,6 +81,7 @@ function Accueil() {
     },
     {
       firstCard: reConnectImage,
+      link: "https://re-connect-hackthon.netlify.app/",
       secondaryCard: [
         {
           title: "Présentation du projet",
@@ -100,20 +101,20 @@ function Accueil() {
 
   const handleFirstCardClick = (index: number) => {
   setCurrentSlide(index);
-  setSecondarySlides(slides[index].secondaryCard);
-  setIsSecondaryCarouselVisible(true);
+  // setSecondarySlides(slides[index].secondaryCard);
+  // setIsSecondaryCarouselVisible(true);
 
   // Scrolling jusqu'à la carte sélectionnée
   const cardSection = document.getElementById(`firstCard-${index}`);
   if (cardSection) {
-    cardSection.scrollIntoView({ behavior: "smooth" }); // Défilement fluide
+    cardSection.scrollIntoView({ behavior: "smooth" }); 
   }
 };
 
 
-  const handleCloseSecondaryCarousel = () => {
-    setIsSecondaryCarouselVisible(false);
-  };
+  // const handleCloseSecondaryCarousel = () => {
+  //   setIsSecondaryCarouselVisible(false);
+  // };
 
   return (
     <>
@@ -208,7 +209,7 @@ function Accueil() {
               </ul>
             </div>
 
-            {isSecondaryCarouselVisible && (
+            {/* {isSecondaryCarouselVisible && (
               <div className="secondary-carousel">
                 <button
                   className="close-carousel"
@@ -227,7 +228,7 @@ function Accueil() {
                   ))}
                 </ul>
               </div>
-            )}
+            )} */}
           </div>
         </section>
       </main>
