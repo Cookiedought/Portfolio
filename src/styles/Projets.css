@@ -1,15 +1,81 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10rem;
+/* Style pour les cartes principales dans le carrousel */
+.carousel_detail {
+  backdrop-filter: blur(10px);
+  height: 20rem;
+  margin-bottom: 2rem;
 }
 
-.travaux {
-  align-content: center;
+.carousel_detail button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.first-card-image {
+  margin-top: 0.8rem;
+  display: block;
+  width: 25rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-card-image:hover {
+  transform: scale(1.1);
+}
+
+.secondary-carousel_slides {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.secondary-carousel_slide {
+  margin: 0 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.secondary-carousel_slide .card {
+  width: 20rem;
+  height: 22rem;
+  backdrop-filter: blur(100px);
+  padding: 20px;
+  border-radius: 1rem;
   text-align: center;
-  width: 50rem;
-  height: 30rem;
-  border-radius: 7rem;
-  backdrop-filter: blur(30px);
+}
+
+.secondary-carousel_slide .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.secondary-carousel_slide .card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.secondary-carousel_slide:hover {
+  transform: scale(1.05);
+}
+
+
+.close-carousel {
+  background-color: #aa0a8a;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 56rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close-carousel:hover {
+  background-color: #b14a9b;
 }

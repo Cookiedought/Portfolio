@@ -12,6 +12,7 @@ import SQLLogo from "../assets/images/SQL.png";
 import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
 import GithubLogo from "../assets/images/Github.png";
+import GitbashLogo from "../assets/images/Gitbash.png"
 import "../styles/Accueil.css";
 
 function Accueil() {
@@ -26,10 +27,11 @@ function Accueil() {
     { src: HTMLLogo },
     { src: IllustratorLogo },
     { src: IndesignLogo },
-    { src: JSLogo },
     { src: TSLogo },
+    { src: JSLogo },
     { src: ViteLogo },
     { src: GithubLogo },
+    { src: GitbashLogo },
     { src: ReactLogo },
     { src: SQLLogo },
   ];
