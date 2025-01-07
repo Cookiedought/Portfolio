@@ -1,6 +1,5 @@
-/* Style pour les cartes principales dans le carrousel */
+
 .carousel_detail {
-  backdrop-filter: blur(10px);
   height: 20rem;
   margin-bottom: 2rem;
 }
@@ -10,6 +9,11 @@
   border: none;
   padding: 0;
   cursor: pointer;
+}
+
+h3 {
+color: white;
+margin-top: 1rem;
 }
 
 .first-card-image {
@@ -38,40 +42,40 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.secondary-carousel_slide .card {
+.card {
   width: 20rem;
   height: 22rem;
-  backdrop-filter: blur(100px);
-  padding: 20px;
+  backdrop-filter: blur(30px);
+  padding: 1.5rem;
   border-radius: 1rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
-.secondary-carousel_slide .card h3 {
+.card h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
-.secondary-carousel_slide .card p {
+.card p {
   font-size: 1rem;
-  color: #555;
+  color: white;
 }
 
 .secondary-carousel_slide:hover {
   transform: scale(1.05);
 }
 
-
 .close-carousel {
   background-color: #aa0a8a;
   color: white;
   border: none;
-  padding: 10px;
+  padding: 0.5rem;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
   position: absolute;
-  top: 56rem;
+  top: 55rem;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -79,3 +83,4 @@
 .close-carousel:hover {
   background-color: #b14a9b;
 }
+

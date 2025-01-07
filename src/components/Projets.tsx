@@ -15,16 +15,16 @@ function Carousel() {
       firstCard: MacatoImage, // Image de la carte principale
       secondaryCard: [
         {
-          title: "Sous-carte 1",
-          description: "Description de la sous-carte 1",
+          title: "Présentation du projet",
+          description: "Description",
         },
         {
-          title: "Sous-carte 2",
-          description: "Description de la sous-carte 2",
+          title: "Framework",
+          description: "Explications",
         },
         {
-          title: "Sous-carte 3",
-          description: "Description de la sous-carte 3",
+          title: "Finalité",
+          description: "Présentation",
         },
       ],
     },
@@ -32,16 +32,16 @@ function Carousel() {
       firstCard: TravelUpImage,
       secondaryCard: [
         {
-          title: "Sous-carte A",
-          description: "Description de la sous-carte A",
+          title: "Présentation du projet",
+          description: "Description",
         },
         {
-          title: "Sous-carte B",
-          description: "Description de la sous-carte B",
+          title: "Framework",
+          description: "Explications",
         },
         {
-          title: "Sous-carte C",
-          description: "Description de la sous-carte C",
+          title: "Finalité",
+          description: "Présentation",
         },
       ],
     },
@@ -49,16 +49,16 @@ function Carousel() {
       firstCard: reConnectImage,
       secondaryCard: [
         {
-          title: "Sous-carte X",
-          description: "Description de la sous-carte X",
+          title: "Présentation du projet",
+          description: "Description",
         },
         {
-          title: "Sous-carte Y",
-          description: "Description de la sous-carte Y",
+          title: "Framework",
+          description: "Explications",
         },
         {
-          title: "Sous-carte Z",
-          description: "Description de la sous-carte Z",
+          title: "Finalité",
+          description: "Présentation",
         },
       ],
     },
@@ -86,14 +86,13 @@ function Carousel() {
                   className={currentSlide === index ? "active" : ""}
                   aria-label={`${index + 1}`}
                 >
-                  {/* Affichage de l'image de la première carte */}
                   <img
                     src={slide.firstCard}
                     alt={`Miniature ${index + 1}`}
                     className="first-card-image"
                   />
                 </button>
-                <h3>Voir le site</h3>
+                <h3>Le site</h3>
               </li>
             ))}
           </ul>
@@ -111,7 +110,7 @@ function Carousel() {
               {secondarySlides.map((card, index) => (
                 <li key={index} className="secondary-carousel_slide">
                   <div className="card">
-                    <h3>{card.title}</h3>
+                    <h4>{card.title}</h4>
                     <p>{card.description}</p>
                   </div>
                 </li>
