@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Accueil from "./components/Accueil";
 import Projets from "./components/Projets";
 import Navbar from "./components/NavBar"
+import "./App.css"
 
 const App: React.FC = () => {
   return (

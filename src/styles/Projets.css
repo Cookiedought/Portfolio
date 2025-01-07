@@ -1,3 +1,13 @@
+body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.337),
+      rgba(0, 0, 0, 0.007)
+    ),
+    url(../assets/images/Background2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .carousel_detail {
   height: 20rem;

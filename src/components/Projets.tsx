@@ -12,7 +12,7 @@ function Carousel() {
 
   const slides = [
     {
-      firstCard: MacatoImage, // Image de la carte principale
+      firstCard: MacatoImage, 
       secondaryCard: [
         {
           title: "Présentation du projet",
