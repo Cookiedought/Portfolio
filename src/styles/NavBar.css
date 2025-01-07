@@ -19,15 +19,16 @@
 
 @media (min-width: 1250px) {
 
-ul {
+.link {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding: 0;
   list-style: none;
   padding-top: 1.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   font-size: 1.3rem;
+  backdrop-filter: blur(30px);
 }
 
 a {
