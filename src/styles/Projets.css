@@ -1,15 +1,96 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10rem;
+/* body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.337),
+      rgba(0, 0, 0, 0.007)
+    ),
+    url(../assets/images/Background2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.travaux {
-  align-content: center;
-  text-align: center;
-  width: 50rem;
-  height: 30rem;
-  border-radius: 7rem;
-  backdrop-filter: blur(30px);
+.carousel_detail {
+  height: 20rem;
+  margin-bottom: 2rem;
 }
+
+.carousel_detail button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+h3 {
+color: white;
+margin-top: 1rem;
+}
+
+.first-card-image {
+  margin-top: 0.8rem;
+  display: block;
+  width: 25rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-card-image:hover {
+  transform: scale(1.1);
+}
+
+.secondary-carousel_slides {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.secondary-carousel_slide {
+  margin: 0 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  width: 20rem;
+  height: 22rem;
+  backdrop-filter: blur(30px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: white;
+}
+
+.secondary-carousel_slide:hover {
+  transform: scale(1.05);
+}
+
+.close-carousel {
+  background-color: #aa0a8a;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 55rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close-carousel:hover {
+  background-color: #b14a9b;
+}
+ */
