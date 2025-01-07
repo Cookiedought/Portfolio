@@ -12,29 +12,109 @@ import SQLLogo from "../assets/images/SQL.png";
 import TSLogo from "../assets/images/TS.png";
 import ViteLogo from "../assets/images/Vite.png";
 import GithubLogo from "../assets/images/Github.png";
-import GitbashLogo from "../assets/images/Gitbash.png"
-import "../styles/Accueil.css";
+import GitbashLogo from "../assets/images/Gitbash.png";
+import "../styles/Projets.css";
+import MacatoImage from "../assets/images/Macato.png";
+import TravelUpImage from "../assets/images/TravelUp.png";
+import reConnectImage from "../assets/images/reConnect.png";
 
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isSecondaryCarouselVisible, setIsSecondaryCarouselVisible] =
+    useState(false);
+  const [secondarySlides, setSecondarySlides] = useState<any[]>([]);
 
   const handleContactClick = () => {
     window.location.href = "mailto:b.lemortcamille@gmail.com";
   };
 
   const logos = [
+    { src: ReactLogo },
     { src: CSSLogo },
     { src: HTMLLogo },
-    { src: IllustratorLogo },
-    { src: IndesignLogo },
     { src: TSLogo },
     { src: JSLogo },
     { src: ViteLogo },
+    { src: SQLLogo },
     { src: GithubLogo },
     { src: GitbashLogo },
-    { src: ReactLogo },
-    { src: SQLLogo },
+    { src: IllustratorLogo },
+    { src: IndesignLogo },
   ];
+
+  const slides = [
+    {
+      firstCard: MacatoImage,
+      link: "https://nzlthomas.github.io/Macato-Eats/",
+      secondaryCard: [
+        {
+          title: "Présentation du projet",
+          description: "Description",
+        },
+        {
+          title: "Framework",
+          description: "Explications",
+        },
+        {
+          title: "Finalité",
+          description: "Présentation",
+        },
+      ],
+    },
+    {
+      firstCard: TravelUpImage,
+      link: "https://travel-up.netlify.app/",
+      secondaryCard: [
+        {
+          title: "Présentation du projet",
+          description: "Description",
+        },
+        {
+          title: "Framework",
+          description: "Explications",
+        },
+        {
+          title: "Finalité",
+          description: "Présentation",
+        },
+      ],
+    },
+    {
+      firstCard: reConnectImage,
+      secondaryCard: [
+        {
+          title: "Présentation du projet",
+          description: "Description",
+        },
+        {
+          title: "Framework",
+          description: "Explications",
+        },
+        {
+          title: "Finalité",
+          description: "Présentation",
+        },
+      ],
+    },
+  ];
+
+  const handleFirstCardClick = (index: number) => {
+  setCurrentSlide(index);
+  setSecondarySlides(slides[index].secondaryCard);
+  setIsSecondaryCarouselVisible(true);
+
+  // Scrolling jusqu'à la carte sélectionnée
+  const cardSection = document.getElementById(`firstCard-${index}`);
+  if (cardSection) {
+    cardSection.scrollIntoView({ behavior: "smooth" }); // Défilement fluide
+  }
+};
+
+
+  const handleCloseSecondaryCarousel = () => {
+    setIsSecondaryCarouselVisible(false);
+  };
 
   return (
     <>
@@ -87,8 +167,7 @@ function Accueil() {
             Contactez-moi ici !
           </button>
         </div>
-      </main>
-      <footer>
+
         <div className="logos">
           {logos.map((logo, index) => (
             <img
@@ -99,7 +178,62 @@ function Accueil() {
             />
           ))}
         </div>
-      </footer>
+
+        <section id="Projets">
+          <div className="container">
+            <div className="carousel">
+              <ul className="carousel_detail">
+                {slides.map((slide, index) => (
+                  <li key={index} id={`firstCard-${index}`}>
+                    <button
+                      onClick={() => handleFirstCardClick(index)}
+                      className={currentSlide === index ? "active" : ""}
+                      aria-label={`${index + 1}`}
+                    >
+                      <img
+                        src={slide.firstCard}
+                        alt={`Miniature ${index + 1}`}
+                        className="first-card-image"
+                      />
+                    </button>
+                    <a
+                      href={slide.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-website"
+                    >
+                      Voir le site
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {isSecondaryCarouselVisible && (
+              <div className="secondary-carousel">
+                <button
+                  className="close-carousel"
+                  onClick={handleCloseSecondaryCarousel}
+                >
+                  Fermer
+                </button>
+                <ul className="secondary-carousel_slides">
+                  {secondarySlides.map((card, index) => (
+                    <li key={index} className="secondary-carousel_slide">
+                      <div className="card">
+                        <h4>{card.title}</h4>
+                        <p>{card.description}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
+
+      <footer>© 2025 Portfolio Camille Lemort | Tous droits réservés.</footer>
     </>
   );
 }

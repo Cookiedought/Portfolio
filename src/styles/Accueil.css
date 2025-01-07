@@ -1,14 +1,9 @@
 :root {
   font-family: "Quicksand", serif;
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.337),
-      rgba(0, 0, 0, 0.007)
-    ),
-    url(../assets/images/Background2.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background-image: url(../assets/images/Background2.jpg);
   background-size: cover;
-}
+  background-repeat: no-repeat;
+  }
 
 * {
   margin: 0;
@@ -64,7 +59,7 @@ h1 {
 }
 
 main {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -85,7 +80,7 @@ main {
   padding: 1rem;
   color: white;
   font-size: 1.9rem;
-  text-align: center;  
+  text-align: center;
 }
 
 .presentation i {
@@ -108,7 +103,7 @@ main {
   text-decoration: none;
   border-radius: 0.6rem;
   margin-left: auto;
-  border-color:#c7368f;
+  border-color: #c7368f;
 }
 
 /* RESPONSIVE DESKTOP */
@@ -121,6 +116,7 @@ main {
   }
 
   .avatar {
+    margin: 1.5rem;
     width: 150px;
     height: 140px;
     border-radius: 100%;
@@ -133,7 +129,8 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   .logos img {
@@ -202,5 +199,120 @@ main {
     display: flex;
     font-size: 16px;
     text-decoration: none;
-    }
+  }
+}
+
+.carousel_detail {
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+
+.carousel_detail button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.link-website {
+  color: white;
+}
+
+.first-card-image {
+  margin:1rem;
+  margin-top: 3rem;
+  display: block;
+  width: 25rem;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-card-image:hover {
+  transform: scale(1.1);
+}
+
+.secondary-carousel_slides {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.secondary-carousel_slide {
+  margin: 0 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+.card {
+  width: 20rem;
+  height: 22rem;
+  backdrop-filter: blur(30px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: white;
+}
+
+.secondary-carousel_slide:hover {
+  transform: scale(1.05);
+}
+
+.close-carousel {
+  background-color: #aa0a8a;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 132rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close-carousel:hover {
+  background-color: #b14a9b;
+}
+
+footer {
+  margin-top: 5rem;
+  text-align: center;
+  align-content: center;
+  height: 3rem;
+  color: white;
+  font-size: medium;
+  backdrop-filter: blur(30px);
+}
+
+.link-website {
+  display: block;
+  font-size: 1.2rem; 
+  text-decoration: none; 
+  color: white;
+  text-align: center;
 }

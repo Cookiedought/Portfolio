@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Accueil from "./components/Accueil";
-import Projets from "./components/Projets";
+// import Projets from "./components/Projets";
 import Navbar from "./components/NavBar"
 import "./App.css"
 
@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <Navbar /> 
       <Routes>
         <Route path="/" element={<Accueil />} />
-        <Route path="/projets" element={<Projets />} />
+        {/* <Route path="/projets" element={<Projets />} /> */}
       </Routes>
     </Router>
   );
