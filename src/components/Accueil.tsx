@@ -20,9 +20,7 @@ import reConnectImage from "../assets/images/reConnect.png";
 function Accueil() {
   const [isHovered, setIsHovered] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  // const [isSecondaryCarouselVisible, setIsSecondaryCarouselVisible] =
-  //   useState(false);
-  // const [secondarySlides, setSecondarySlides] = useState<any[]>([]);
+  const [, setIsSecondaryCarouselVisible] = useState(false);
 
   const handleContactClick = () => {
     window.location.href = "mailto:b.lemortcamille@gmail.com";
@@ -46,71 +44,27 @@ function Accueil() {
     {
       firstCard: MacatoImage,
       link: "https://nzlthomas.github.io/Macato-Eats/",
-      secondaryCard: [
-        {
-          title: "Présentation du projet",
-          description: "Description",
-        },
-        {
-          title: "Framework",
-          description: "Explications",
-        },
-        {
-          title: "Finalité",
-          description: "Présentation",
-        },
-      ],
     },
     {
       firstCard: TravelUpImage,
       link: "https://travel-up.netlify.app/",
-      secondaryCard: [
-        {
-          title: "Présentation du projet",
-          description: "Description",
-        },
-        {
-          title: "Framework",
-          description: "Explications",
-        },
-        {
-          title: "Finalité",
-          description: "Présentation",
-        },
-      ],
     },
     {
       firstCard: reConnectImage,
       link: "https://re-connect-hackthon.netlify.app/",
-      secondaryCard: [
-        {
-          title: "Présentation du projet",
-          description: "Description",
-        },
-        {
-          title: "Framework",
-          description: "Explications",
-        },
-        {
-          title: "Finalité",
-          description: "Présentation",
-        },
-      ],
     },
   ];
 
   const handleFirstCardClick = (index: number) => {
-  setCurrentSlide(index);
-  // setSecondarySlides(slides[index].secondaryCard);
-  // setIsSecondaryCarouselVisible(true);
+    setCurrentSlide(index);
+    // setSecondarySlides(slides[index].secondaryCard);
+    setIsSecondaryCarouselVisible(true);
 
-  // Scrolling jusqu'à la carte sélectionnée
-  const cardSection = document.getElementById(`firstCard-${index}`);
-  if (cardSection) {
-    cardSection.scrollIntoView({ behavior: "smooth" }); 
-  }
-};
-
+    const cardSection = document.getElementById(`firstCard-${index}`);
+    if (cardSection) {
+      cardSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   // const handleCloseSecondaryCarousel = () => {
   //   setIsSecondaryCarouselVisible(false);
@@ -187,7 +141,7 @@ function Accueil() {
                   <li key={index} id={`firstCard-${index}`}>
                     <button
                       onClick={() => handleFirstCardClick(index)}
-                      className={currentSlide === index ? "active" : ""}
+                      className={currentSlide === index ? "projets" : ""}
                       aria-label={`${index + 1}`}
                     >
                       <img
@@ -208,27 +162,6 @@ function Accueil() {
                 ))}
               </ul>
             </div>
-
-            {/* {isSecondaryCarouselVisible && (
-              <div className="secondary-carousel">
-                <button
-                  className="close-carousel"
-                  onClick={handleCloseSecondaryCarousel}
-                >
-                  Fermer
-                </button>
-                <ul className="secondary-carousel_slides">
-                  {secondarySlides.map((card, index) => (
-                    <li key={index} className="secondary-carousel_slide">
-                      <div className="card">
-                        <h4>{card.title}</h4>
-                        <p>{card.description}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )} */}
           </div>
         </section>
       </main>
